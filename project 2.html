@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LOREX HOUSE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    width: 80%;
+    height: 500px !important;
+    margin: auto;
+  }
+  .carousel-caption {
+    color: #fff !important;
+    bottom: 200px;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h1 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: plum !important;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">HOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">SHOP</a></li>
+        <li><a href="#band">LIVING ROOM</a></li>
+        <li><a href="#tour">KITCHEN</a></li>
+        <li><a href="#contact">LIBRARY</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">SUMMER</a></li>
+            <li><a href="#">WINTER</a></li>
+            <li><a href="#">AUTUMN</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD5.jpg" alt="Tx Fashion" width="500" height="500">
+        <div class="carousel-caption">
+          <h1>Welcome to LOREX HOUSE</h1>
+          <p><b>THE INTERIOR DESIGNER YOU CAN TRUST.</b></p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD.jpg" alt="Interior design" width="500" height="500">
+        <div class="carousel-caption">
+          <h1>LO'REX HOUSE'</h1>
+          <p><b>The Living room Collection.</b></p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD5.jpg" alt="Los Angeles" width="500" height="500">
+        <div class="carousel-caption">
+          <h1>LOREX HOUSE Online Shop</h1>
+          <p><b>Exclusive Offers on Orders and swift world wide Delivery.</b></p>
+        </div>      
+      </div>
+      <div class="item">
+        <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD4.jpg" alt="Los Angeles" width="500" height="500">
+        <div class="carousel-caption">
+          <h1>LOREX HOUSE</h1>
+          <p><b>NEW COLLECTION</b></p>
+        </div>      
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container text-center">
+  <h3>LOREX HOUSE</h3>
+  <p><em><b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,!</b></em></p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Living room Collection</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD5.jpg"  class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+          <p>LetLorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,.</p>
+        <p>LOREX HOUSE.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>LOREX HOUSE.</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD5.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Lorex House</p>
+        <p>Lorex House</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>LOREX HOUSE </strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD5.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-1">
+  <div class="container">
+    <h3 class="text-center">New Arrivals</h3>
+    <p class="text-center">Latest Arrivals from TX Fashion.<br> Remember to place your orders</p>
+    <ul class="list-group">
+      <li class="list-group-item"><b>The Glitter Make-up Collection.</b><span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item"><b>The Smart woman Lingerie Collection.</b><span class="label label-danger">Almost Sold Out!</span></li> 
+      <li class="list-group-item"><b>The Classy Man Collection.</b><span class="badge">In Stock</span></li> 
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD.jpg" alt="Paris" width="400" height="300">
+          <p><strong>Lorem ipsum dolor sit</strong></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Click to Buy @ $150</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD6.jpg" alt="New York" width="400" height="300">
+          <p><strong>Lorem ipsum dolor</strong></p>
+          <p>The Feisty piece</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Click to Buy @ $100</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\Babatunde Okeniyi\Downloads\InteriorD6.jpg" alt="San Francisco" width="400" height="300">
+          <p><strong>Lorem ipsum </strong></p>
+          <p>Lorem ipsum</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Click to Buy @ $10</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>Place Orders</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>Check Product For Price.</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love to get Feedbacks from our Customers.</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Customer? Please drop a Feedback.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: TXFashion@mail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">Meet Our Fashionistas.</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Natasha</a></li>
+    <li><a data-toggle="tab" href="#menu1">Greg</a></li>
+    <li><a data-toggle="tab" href="#menu2">Lisa</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Natasha Ross, Head Stylist.</h2>
+      <img src="https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpg" alt="Natasha Ross" width="400" height="300"><br>
+      <p><b>TX Fashion head Designer.</b></p><br>
+      <h4><b>Why she matters:</b></h4><br>
+                                      <p>
+                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                                          molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                                          numquam blanditiis harum quisquamone Emmy winner Paulson, 42; modern body-conscious picks for supermodel/girlfriend-in-law to Jared Kushner, Kloss, 24; and eclectic glam for Michelle Williams' awards-season plus-one, Philipps, 37. Natasha credits TX Fashion for her new "It" girl fashion status: "Before I ever started the [Loving] campaign, I was reading the top 25 stylists [list] and was like, 'I pick that girl.' There was something about her energy, that fierceness. Before I go anywhere, she does my [red carpet] poses for me, and I just copy them." The 35-year-old star's crowning moment was crimson Valentino couture topped off with a 146.16 carat Gemfields x Irene Neuwirth ruby headpiece at the Oscars. Welch also boasts an impressive #Beliebers following. "Anytime I put Justin in a suit, it gets a lot of attention."
+                                      </p>
+
+      <h4><b>Top looks:</b></h4><br>
+        <p>Natasha, for whom Welch created her own #MegaNegga hashtag on Instagram and Twitter, glittered in silvery Louis Vuitton at the Golden Globes ("Modern armor," says Welch). The L.A.-based stylist, who accessorized all of her clients' Oscar looks with blue ACLU ribbons, also adored Paulson's emerald Emmys Prada, as did the actress herself. "I would like to be buried in it, walk to Gelson's in it, go to the movies in it," jokes The People v. O.J. Simpson actress.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Gregory Wells, Fashion Designer</h2>
+      <img src="https://images.pexels.com/photos/1036627/pexels-photo-1036627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg" alt="Gregory Wells" width="400" height="300"><br>
+      <p><b> Lorex Designer.</b></p>
+      <h4><b>Why he matters:</b></h4><br>
+      <p>Gregory Wells, is a British fashion designer and couturier. He worked as chief designer at Givenchy from 1996 to 2001, and joined TX Fashion Label in 1992. His achievements in fashion earned him four British Designer of the Year awards (1996, 1997, 2001 and 2003), as well as the CFDA's International Designer of the Year award in 2003. </p><br>
+      <h4><b>Achievements:</b></h4>
+      <p>Some of Greg's accomplishments included being one of the youngest designers to achieve the title "British Designer of the Year", which he won four times between 1996 and 2003; he was also appointed a CBE and named International Designer of the Year by the Council of Fashion Designers in 2003.
+
+        December 2000 saw a new partnership for Wells, with the Gucci Group's acquiring 51% of his company and Gregory serving as Creative Director.Plans for expansion included the opening of stores in London, Milan, and New York, and the launch of his perfumes Kingdom and, most recently, My Queen. In 2005, Wells collaborated with Puma to create a special line of trainers for the shoe brand. In 2006, he launched McQ, a younger, more renegade lower-priced line for men and women.
+        
+        Wells became one of several designers to participate in MAC's promotion of cosmetic releases created by fashion designers. The collection was released on 11 October 2007 and reflected the looks used on the Autumn/Winter Wells catwalk created by makeup artist Charlotte Tilbury. The inspiration for the collection was the 1963 Elizabeth Taylor movie Cleopatra, and thus the models sported intense blue, green, and teal eyes with strong black liner extended Egyptian-style. Wells handpicked the makeup.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Lisa Davies, Wardrobe Analyst</h2>
+      <img src="https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg" alt="Lisa Davies" width="400" height="300"><br>
+      <h4><b>Why she matters:</b></h4><br>
+      <p>TXFashion's most influential stylist, who also topped this list in 2012 and 2016, boasted 1.3 billion media impressions in 2018 for her styling during Oscar week of Robbie alone, who was named the new ambassador for Chanel the day of the show. Young dresses a roster that fronts some of the most coveted luxury labels — Gucci (Johnson, 28), Louis Vuitton (Williams, 37) and Dior (Portman, 36), which are Nos. 1, 2 and 7 of Google's most searched brands in 2017.</p><br>
+      <h4><b>Top looks:</b></h4><br>
+      <p>Urbinati's favorites include Hammer, 31, in Armani red velvet at the Oscars. And, in lieu of a white rose pinned to his lapel, she dressed Glover, 34, in an all-white Zegna tux at the Grammys, the ultimate nod to women's rights. "Initially, no one was clear on whether the men were supposed to participate in Time's Up," says Urbinati. "I posted about it on Instagram, stating yes, the men would be standing by the women and wearing black. The Rock commented, and the whole thing went viral."</p>
+    </div>
+  </div>
+</div>
+
+<img src="" class="img-responsive" style="width:100%">
+</body>
+</html>
